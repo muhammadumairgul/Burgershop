@@ -2,30 +2,30 @@ public class Price {
 
     private double bill;
     private int burgerType;
-    private int additons;
-    private double basePrice;
+    private int additions=0;
+    private double basePrice=20;
 
-    public Price(int burgerType, int additons) {
+    public Price(int burgerType, int additions) {
         this.burgerType = burgerType;
-        this.additons = additons;
+        this.additions = additions;
         this.bill=0;
-        this.basePrice=10;
+
     }
 
     public double getBill() {
         if(burgerType==3) {
 
-          bill= basePrice + additons*2 + 5;
+          bill= basePrice + additions *2 + 5;
         return bill;
 
         }
         if(burgerType==2){
-          bill= basePrice+ additons*2;
+          bill= basePrice+ additions*2;
         return bill;
 
         }
 
-        bill= basePrice;
+        bill= basePrice + additions;
         return bill;
     }
 }

@@ -7,15 +7,15 @@ public class Main {
         System.out.println(lylo.getPrice().getBill());
         System.out.println(lato.getPrice().getBill());
         System.out.println(lato.getType2().getDressingType());
-        System.out.println(lylo.getType2().getDressingType());
+       System.out.println(lylo.getType2().getDressingType());
 
 
 //        System.out.println(lato.getType1().getDressingType());
 //        System.out.println(lato.getType1().getCountD());
 //        System.out.println(lato.getType1().getCountD());
 //        System.out.println(lato.getType1().getDressingType());
-//        double rechnung = lato.getPrice().getBill();
-//        System.out.println(rechnung);
+        double rechnung = lato.getPrice().getBill();
+        System.out.println(rechnung);
 
     }
 }

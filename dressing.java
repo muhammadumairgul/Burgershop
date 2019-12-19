@@ -13,6 +13,16 @@ public class dressing {
         this.CountD= + countD;
     }
 
+    public void dList(){
+        System.out.println("Types of Dressing \n" +
+                "1-------------Lettuce \n" +
+                "1-------------Olive \n"+
+                "1-------------Onion \n"+
+                "1-------------Cabbage \n"+
+                "1-------------Carrot \n"+
+                "1-------------Tomato \n");
+    }
+
     public int getCountD() {
         return CountD;
     }
