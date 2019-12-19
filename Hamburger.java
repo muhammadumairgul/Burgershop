@@ -30,8 +30,8 @@ public class Hamburger {
             this.Burgername="Base Burger";
         setDtyp("lettuce", 1,"Cabbage",1,"Tomato",1,"carrot",1);
 
-        setPrice(new Price(typBur,dressCoun));
-
+        setPrice(new Price(typBur,dressCoun)); //used to set price
+        
     }
 
     public String getBurgername() {
