@@ -1,26 +1,24 @@
+package Burgershop;
+
 public class dressing {
 
     private String dressingType;
-
-    private int CountD;
-
+    private int CountD=0;
+    private String[] dTyp= {"Lettuce","Olive","Onion","Cabbage","Carrot","Tomato"};
 
     public dressing(String dressingType, int countD) {
+
         this.dressingType = dressingType;
-        if(countD==1) {
-            this.CountD = countD;
-        }
-        this.CountD= + countD;
+
+        this.CountD= countD;
     }
 
     public void dList(){
-        System.out.println("Types of Dressing \n" +
-                "1-------------Lettuce \n" +
-                "1-------------Olive \n"+
-                "1-------------Onion \n"+
-                "1-------------Cabbage \n"+
-                "1-------------Carrot \n"+
-                "1-------------Tomato \n");
+
+        for(int i=0; i<dTyp.length; i++) {
+            System.out.println("Types of Dressing " + (i + 1) + "-----> " + dTyp[i]);
+        }
+
     }
 
     public int getCountD() {

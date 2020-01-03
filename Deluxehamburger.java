@@ -1,27 +1,33 @@
+package Burgershop;
+
 public class Deluxehamburger extends Hamburger {
 
     private static String extra1="chips";
     private static String extra2="drinks";
 
+    private Price Price;
+
     public Deluxehamburger(String rollType, String meatType, int burtype) {
         super(rollType, meatType, burtype);
-    setDtypDE("lecttuce", "tomato", "carrot", "cabbage");
+        setPrice(new Price(burtype, 0));
 
     }
 
 
-    public void setDtypDE(String ty1, String ty2,  String ty3, String ty4) {
-        super.setDtyp(ty1, 1, ty2, 4, ty3, 1, ty4, 1);
+    public void setPrice(Price price) { // do not need a price setter
+        this.Price = price;
     }
 
-    @Override
     public Price getPrice() {
-        return super.getPrice();
+        return Price;
     }
 
-    @Override
-    public dressing getType1() {
-        return super.getType1();
+    public static String getExtras() {
+        return extra1 + extra2;
+    }
+
+    public static String getExtra2() {
+        return extra2;
     }
 
 
