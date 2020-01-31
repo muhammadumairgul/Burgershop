@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         boolean quit = false;
         int choice = 0;
+        int BurgerChoice=0;
 
         printInstructions();
         while (!quit) {
@@ -22,16 +23,54 @@ public class Main {
                     printInstructions();
                     break;
                 case 1:
-                    dressing items=new dressing("salad", 0);
-                    items.dList();
+                    while(BurgerChoice<=3) {
+                        System.out.println("Choose type of Burger \n" +
+                                "1--------- Base Hamburger \n" +
+                                "2--------- Healthy HamBurger \n" +
+                                "3--------- Delux HamBurger");
+                        BurgerChoice = scanner.nextInt();
+                        scanner.nextLine();
+                        if(BurgerChoice==1)
+                        {
+                            Hamburger baseBurger=new Hamburger("White Bread", "Chicken",1);
+                            baseBurger.setDtyp("Olive",2,"Cabbage",1,"tomato", 2, "Onion-Ring",1);
+                            System.out.println("Base hamburger price: " + baseBurger.getPrice().getBill());
+                            break;
+                        }
+                        else if(BurgerChoice==2)
+                        {
+                            HealthyBurger hBurger=new HealthyBurger("Chicken",2);
+                            hBurger.setDtyp("Cabbage",3,"Tomato",2);
+                            System.out.println("Healthy hamburger price: " + hBurger.getPrice().getBill());
+                            break;
+                        }
+                        else if(BurgerChoice==3)
+                        {
+                            Deluxehamburger dBurger=new Deluxehamburger("White Bread", "Chicken",3);
+                            System.out.println("Base hamburger price: " + dBurger.getPrice().getBill());
+                            break;
+                        }
+                        else {
+                            System.out.println("Wrong choice. Please enter 0 to choose again");
+                            BurgerChoice = scanner.nextInt();
+                            scanner.nextLine();
+                            if(BurgerChoice>=4)
+                                break;
+                        }
+
+                    }
+                    BurgerChoice=0;
                     break;
                 case 2:
+                    dressing items= new dressing("salad", 0);
+                    items.dList();
 
-                    break;
                 case 3:
+
 
                     break;
                 case 4:
+                    System.out.println("Thank you For Choosing Bills Burgers");
                     quit = true;
                     break;
             }
@@ -40,13 +79,15 @@ public class Main {
 
     public static void printInstructions() {
         System.out.println("\nPress ");
-        System.out.println("\t 1 - To show the burger option");
-        System.out.println("\t 2 - To choose a burger item to the list.");
-        System.out.println("\t 3 - To show Bill");
-        System.out.println("\t 4 - To remove an item from the list.");
-        System.out.println("\t 5 - To search for an item in the list.");
-        System.out.println("\t 6 - To quit the application.");
+        System.out.println("\t 1 - To choose burger option");
+        System.out.println("\t 2 - To see dressing type.");
+        System.out.println("\t 3 - To select types of dressing");
+        System.out.println("\t 4 - To Quit Menu.");
+
     }
+
+
+
 
 
 

@@ -12,8 +12,6 @@ public class Hamburger {
     private dressing type3;
     private dressing type4;
     private int dressCount=0;
-    private dressing type= new dressing("salad",0);
-
 
     public Hamburger(String rollType, String meatType, int burtype) {
 
@@ -77,11 +75,6 @@ public class Hamburger {
 
     public dressing getType4() {
         return type4;
-    }
-
-    public dressing getType() {
-
-        return type;
     }
 
     public String getRollType() {
