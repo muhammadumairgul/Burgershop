@@ -1,6 +1,7 @@
 package Burgershop;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -11,6 +12,7 @@ public class Main {
         boolean quit = false;
         int choice = 0;
         int BurgerChoice=0;
+        ArrayList<OrderList> sumList= new ArrayList<OrderList>();
 
         printInstructions();
         while (!quit) {
@@ -35,6 +37,10 @@ public class Main {
                             Hamburger baseBurger=new Hamburger("White Bread", "Chicken",1);
                             baseBurger.setDtyp("Olive",2,"Cabbage",1,"tomato", 2, "Onion-Ring",1);
                             System.out.println("Base hamburger price: " + baseBurger.getPrice().getBill());
+                            baseBurger.retDtyp();
+                            sumList.add(new OrderList("Hamburger", baseBurger.getPrice().getBill() ));
+                            System.out.println(sumList.get(0).getBurgerPrice());
+
                             break;
                         }
                         else if(BurgerChoice==2)
@@ -42,6 +48,7 @@ public class Main {
                             HealthyBurger hBurger=new HealthyBurger("Chicken",2);
                             hBurger.setDtyp("Cabbage",3,"Tomato",2);
                             System.out.println("Healthy hamburger price: " + hBurger.getPrice().getBill());
+
                             break;
                         }
                         else if(BurgerChoice==3)

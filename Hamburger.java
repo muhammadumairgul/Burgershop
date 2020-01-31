@@ -4,7 +4,7 @@ package Burgershop;
 public class Hamburger {
 
     private Price Price;
-    private String Burgername;
+    private String burgername;
     private String rollType;
     private String meatType;
     private Dressing type1;
@@ -25,13 +25,13 @@ public class Hamburger {
 
 
         if(typBur==3){
-            this.Burgername="Delux Burger";
+            this.burgername ="Delux Burger";
 
         }else if(typBur==2){
-            this.Burgername="Healthy Burger";
+            this.burgername ="Healthy Burger";
 
         }else {
-            this.Burgername = "Base Burger";
+            this.burgername = "Base Burger";
             setDtyp("lettuce", 1, "Cabbage", 1, "Tomato", 1, "carrot", 1);
             setPrice(new Price(typBur, dressCount));
         }
@@ -39,7 +39,7 @@ public class Hamburger {
     }
 
     public String getBurgername() {
-        return Burgername;
+        return burgername;
     }
 
     public void setPrice(Price price) { // do not need a price setter
@@ -60,6 +60,11 @@ public class Hamburger {
         this.type4= new Dressing(ty4, con4);
     }
 
+    public void retDtyp(){
+        System.out.println("Dressing types used in Hamburger are \n" +
+                "Type 1: " + type1.getDressingType() + "; Type 2: " + type2.getDressingType() + "; Type 3: " + type3.getDressingType()
+                +"; Type 4: " + type4.getDressingType() );
+    }
 
     public Dressing getType1() {
         return type1;
