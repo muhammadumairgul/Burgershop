@@ -3,8 +3,8 @@ package Burgershop;
 
 public class HealthyBurger extends Hamburger {
 
-    private dressing type1;
-    private dressing type2;
+    private Dressing type1;
+    private Dressing type2;
     private int dressCount=0;
     private Price Price;
 
@@ -18,8 +18,8 @@ public class HealthyBurger extends Hamburger {
 
         dressCount +=  con1 + con2;
         if(dressCount <= 6) {
-            this.type1 = new dressing(ty1, con1);
-            this.type2 = new dressing(ty2, con2);
+            this.type1 = new Dressing(ty1, con1);
+            this.type2 = new Dressing(ty2, con2);
         }
         else
             System.out.println("Dressing type can n't be more than 6");
@@ -35,12 +35,12 @@ public class HealthyBurger extends Hamburger {
     }
 
     @Override
-    public dressing getType1() {
+    public Dressing getType1() {
         return type1;
     }
 
     @Override
-    public dressing getType2() {
+    public Dressing getType2() {
         return type2;
     }
 }

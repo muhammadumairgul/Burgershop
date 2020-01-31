@@ -16,7 +16,7 @@ public class Deluxehamburger extends Hamburger {
 
     public void dressTyp(){
         setDtyp("lettuce", 1, "Cabbage", 1, "Tomato", 1, "carrot", 1);
-        System.out.println("Standard Dressing, NO more dressing can be added ");
+        System.out.println("Standard Dressing, NO more Dressing can be added ");
     }
 
     public void setPrice(Price price) {

@@ -7,10 +7,10 @@ public class Hamburger {
     private String Burgername;
     private String rollType;
     private String meatType;
-    private dressing type1;
-    private dressing type2;
-    private dressing type3;
-    private dressing type4;
+    private Dressing type1;
+    private Dressing type2;
+    private Dressing type3;
+    private Dressing type4;
     private int dressCount=0;
 
     public Hamburger(String rollType, String meatType, int burtype) {
@@ -54,26 +54,26 @@ public class Hamburger {
     public void setDtyp(String ty1, int con1,String ty2, int con2,String ty3, int con3,String ty4, int con4 ){
 
         this.dressCount +=  con1 + con2 + con3 + con4;
-        this.type1= new dressing(ty1, con1);
-        this.type2= new dressing(ty2, con2);
-        this.type3= new dressing(ty3, con3);
-        this.type4= new dressing(ty4, con4);
+        this.type1= new Dressing(ty1, con1);
+        this.type2= new Dressing(ty2, con2);
+        this.type3= new Dressing(ty3, con3);
+        this.type4= new Dressing(ty4, con4);
     }
 
 
-    public dressing getType1() {
+    public Dressing getType1() {
         return type1;
     }
 
-    public dressing getType2() {
+    public Dressing getType2() {
         return type2;
     }
 
-    public dressing getType3() {
+    public Dressing getType3() {
         return type3;
     }
 
-    public dressing getType4() {
+    public Dressing getType4() {
         return type4;
     }
 

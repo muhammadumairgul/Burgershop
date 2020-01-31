@@ -62,7 +62,7 @@ public class Main {
                     BurgerChoice=0;
                     break;
                 case 2:
-                    dressing items= new dressing("salad", 0);
+                    Dressing items= new Dressing("salad", 0);
                     items.dList();
 
                 case 3:
@@ -80,8 +80,8 @@ public class Main {
     public static void printInstructions() {
         System.out.println("\nPress ");
         System.out.println("\t 1 - To choose burger option");
-        System.out.println("\t 2 - To see dressing type.");
-        System.out.println("\t 3 - To select types of dressing");
+        System.out.println("\t 2 - To see Dressing type.");
+        System.out.println("\t 3 - To select types of Dressing");
         System.out.println("\t 4 - To Quit Menu.");
 
     }

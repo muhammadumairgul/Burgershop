@@ -1,12 +1,12 @@
 package Burgershop;
 
-public class dressing {
+public class Dressing {
 
     private String dressingType;
     private int CountD=0;
     private String[] dTyp= {"Lettuce","Olive","Onion-Ring","Cabbage","Carrot","Tomato"};
 
-    public dressing(String dressingType, int countD) {
+    public Dressing(String dressingType, int countD) {
 
         this.dressingType = dressingType;
 
