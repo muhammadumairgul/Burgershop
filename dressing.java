@@ -4,7 +4,7 @@ public class dressing {
 
     private String dressingType;
     private int CountD=0;
-    private String[] dTyp= {"Lettuce","Olive","Onion","Cabbage","Carrot","Tomato"};
+    private String[] dTyp= {"Lettuce","Olive","Onion-Ring","Cabbage","Carrot","Tomato"};
 
     public dressing(String dressingType, int countD) {
 

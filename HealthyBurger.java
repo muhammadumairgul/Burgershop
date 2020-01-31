@@ -17,8 +17,12 @@ public class HealthyBurger extends Hamburger {
     public void setDtyp(String ty1, int con1,String ty2, int con2 ){
 
         dressCount +=  con1 + con2;
-        this.type1= new dressing(ty1, con1);
-        this.type2= new dressing(ty2, con2);
+        if(dressCount <= 6) {
+            this.type1 = new dressing(ty1, con1);
+            this.type2 = new dressing(ty2, con2);
+        }
+        else
+            System.out.println("Dressing type can n't be more than 6");
 
     }
 

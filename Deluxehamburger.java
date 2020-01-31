@@ -10,17 +10,23 @@ public class Deluxehamburger extends Hamburger {
     public Deluxehamburger(String rollType, String meatType, int burtype) {
         super(rollType, meatType, burtype);
         setPrice(new Price(burtype, 0));
+        dressTyp();
 
     }
 
+    public void dressTyp(){
+        setDtyp("lettuce", 1, "Cabbage", 1, "Tomato", 1, "carrot", 1);
+        System.out.println("Standard Dressing, NO more dressing can be added ");
+    }
 
-    public void setPrice(Price price) { // do not need a price setter
+    public void setPrice(Price price) {
         this.Price = price;
     }
 
     public Price getPrice() {
         return Price;
     }
+
 
     public static String getExtras() {
         return extra1 + extra2;
