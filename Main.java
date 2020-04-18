@@ -25,9 +25,6 @@ public class Main {
             scanner.nextLine();
             switch (choice) {
 
-                /*case 0:
-                    printInstructions();
-                    break;*/
                 case 1:
                     while(BurgerChoice<=3) {
                         System.out.println("Choose type of Burger or enter any number greater than 4 to return to main menu \n" +
