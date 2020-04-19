@@ -1,27 +1,32 @@
+package Burgershop;
+
 public class Deluxehamburger extends Hamburger {
 
     private static String extra1="chips";
     private static String extra2="drinks";
 
+    private Price Price;
+
     public Deluxehamburger(String rollType, String meatType, int burtype) {
         super(rollType, meatType, burtype);
-    setDtypDE("lecttuce", "tomato", "carrot", "cabbage");
+        setPrice(new Price(burtype, 4));
+        dressTyp();
 
     }
 
-
-    public void setDtypDE(String ty1, String ty2,  String ty3, String ty4) {
-        super.setDtyp(ty1, 1, ty2, 4, ty3, 1, ty4, 1);
+    public void dressTyp(){
+        setDtyp("lettuce", 1, "Cabbage", 1, "Tomato", 1, "carrot", 1);
+        System.out.println("Standard Dressing, NO more Dressing can be added ");
     }
 
-    @Override
-    public Price getPrice() {
-        return super.getPrice();
+
+
+    public static String getExtras() {
+        return extra1 + extra2;
     }
 
-    @Override
-    public dressing getType1() {
-        return super.getType1();
+    public static String getExtra2() {
+        return extra2;
     }
 
 

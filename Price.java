@@ -1,31 +1,33 @@
+package Burgershop;
+
 public class Price {
 
-    private double bill;
+
     private int burgerType;
     private int additions=0;
-    private double basePrice=20;
+    private static double basePrice=20;
+    private double finalPrice=0;
 
     public Price(int burgerType, int additions) {
         this.burgerType = burgerType;
         this.additions = additions;
-        this.bill=0;
+
 
     }
 
     public double getBill() {
         if(burgerType==3) {
-
-          bill= basePrice + additions *2 + 5;
-        return bill;
-
-        }
-        if(burgerType==2){
-          bill= basePrice+ additions*2;
-        return bill;
+            finalPrice= basePrice + (additions *2) + 5;
+            return finalPrice;
 
         }
-
-        bill= basePrice + additions;
-        return bill;
+        else if(burgerType==2){
+            finalPrice= basePrice + (additions *2);
+            return finalPrice;
+        }
+        else {
+            finalPrice = basePrice + additions;
+            return finalPrice;
+        }
     }
 }
